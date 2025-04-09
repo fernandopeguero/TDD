@@ -36,3 +36,7 @@ const calculator = {
         return a * b;
     },
 };
+
+test("Adding numbers", () => {
+    expect(calculator.add(5, 5)).toBe(10);
+});
