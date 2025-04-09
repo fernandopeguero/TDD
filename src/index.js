@@ -40,3 +40,7 @@ const calculator = {
 test("Adding numbers", () => {
     expect(calculator.add(5, 5)).toBe(10);
 });
+
+test("Substracting numbers", () => {
+    expect(calculator.substract(5, 5)).toBe(0);
+});
