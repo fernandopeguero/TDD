@@ -9,3 +9,13 @@ test("Capitalize string", () => {
 
     expect(result).toBe("Tomado");
 });
+
+// A reverseString function that takes a string and returns it reversed.
+
+function reverseString(str) {
+    return str.split("").reverse().join("");
+}
+
+test("Reverse string", () => {
+    expect(reverseString("julito")).toBe("otiluj");
+});
