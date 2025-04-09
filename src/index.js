@@ -19,3 +19,20 @@ function reverseString(str) {
 test("Reverse string", () => {
     expect(reverseString("julito")).toBe("otiluj");
 });
+
+// A calculator object that contains functions for the basic operations: add, subtract, divide, and multiply. Each of these functions should take two numbers and return the correct calculation.
+
+const calculator = {
+    add: (a, b) => {
+        return a + b;
+    },
+    substract: (a, b) => {
+        return a > b ? a - b : b - a;
+    },
+    divide: (a, b) => {
+        return a / b;
+    },
+    multiply: (a, b) => {
+        return a * b;
+    },
+};
