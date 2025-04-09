@@ -1,3 +1,11 @@
-test("two plus two is four", () => {
-    expect(2 + 2).toBe(4);
+//  A capitalize function that takes a string and returns it with the first character capitalized.
+
+function capitalize(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+test("Capitalize string", () => {
+    const result = capitalize("tomado");
+
+    expect(result).toBe("Tomado");
 });
