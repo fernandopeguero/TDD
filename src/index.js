@@ -41,10 +41,14 @@ test("Adding numbers", () => {
     expect(calculator.add(5, 5)).toBe(10);
 });
 
-test("Substracting numbers", () => {
+test("Subtracting numbers", () => {
     expect(calculator.substract(5, 5)).toBe(0);
 });
 
 test("Multiplying numbers", () => {
     expect(calculator.multiply(5, 5)).toBe(25);
+});
+
+test("Division Test", () => {
+    expect(calculator.divide(5, 5)).toBe(1);
 });
