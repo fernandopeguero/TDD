@@ -44,3 +44,7 @@ test("Adding numbers", () => {
 test("Substracting numbers", () => {
     expect(calculator.substract(5, 5)).toBe(0);
 });
+
+test("Multiplying numbers", () => {
+    expect(calculator.multiply(5, 5)).toBe(25);
+});
