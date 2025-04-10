@@ -52,3 +52,18 @@ test("Multiplying numbers", () => {
 test("Division Test", () => {
     expect(calculator.divide(5, 5)).toBe(1);
 });
+
+function caesarCypher(letters, shiftIndex) {
+    alphabet = "abcdefghijklmnopqrstuvwxyz";
+
+    shiftedAlphabet =
+        alphabet.slice(shiftIndex) + alphabet.slice(0, shiftIndex);
+
+    result = "";
+
+    for (let i = 0; i < letters.length; i++) {
+        result += shiftedAlphabet[alphabet.indexOf(letters[i])];
+    }
+
+    return result;
+}
