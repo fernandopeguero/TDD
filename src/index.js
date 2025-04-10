@@ -53,17 +53,24 @@ test("Division Test", () => {
     expect(calculator.divide(5, 5)).toBe(1);
 });
 
+//  Caesar Cypher
 function caesarCypher(letters, shiftIndex) {
-    alphabet = "abcdefghijklmnopqrstuvwxyz";
+    const alphabet = "abcdefghijklmnopqrstuvwxyz";
 
-    shiftedAlphabet =
+    const shiftedAlphabet =
         alphabet.slice(shiftIndex) + alphabet.slice(0, shiftIndex);
 
-    result = "";
+    let result = "";
 
     for (let i = 0; i < letters.length; i++) {
-        result += shiftedAlphabet[alphabet.indexOf(letters[i])];
+        result += shiftedAlphabet[alphabet.indexOf(letters[i].toLowerCase())];
     }
 
     return result;
 }
+
+test("Shift cypher by 3", () => {
+    const result = caesarCypher("xyz", 3);
+
+    expect(result).toBe("abc");
+});
