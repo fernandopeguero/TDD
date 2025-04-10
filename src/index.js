@@ -65,14 +65,20 @@ function caesarCypher(letters, shiftIndex) {
     for (let i = 0; i < letters.length; i++) {
         const currentLetter = letters[i];
 
-        if (currentLetter === currentLetter.toUpperCase()) {
-            result +=
-                shiftedAlphabet[
-                    alphabet.indexOf(currentLetter.toLowerCase())
-                ].toUpperCase();
+        if (isAlphaNumeric(currentLetter)) {
+            if (currentLetter === currentLetter.toUpperCase()) {
+                result +=
+                    shiftedAlphabet[
+                        alphabet.indexOf(currentLetter.toLowerCase())
+                    ].toUpperCase();
+            } else {
+                result +=
+                    shiftedAlphabet[
+                        alphabet.indexOf(currentLetter.toLowerCase())
+                    ];
+            }
         } else {
-            result +=
-                shiftedAlphabet[alphabet.indexOf(currentLetter.toLowerCase())];
+            result += currentLetter;
         }
     }
 
@@ -108,4 +114,10 @@ test("Shift by 3 with case sensitive", () => {
     const result = caesarCypher("HeLLo", 3);
 
     expect(result).toBe("KhOOr");
+});
+
+test("shift by 3 with non alpha numeric characters", () => {
+    const result = caesarCypher("Hello, World!", 3);
+
+    expect(result).toBe("Khoor, Zruog!");
 });
