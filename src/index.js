@@ -121,3 +121,23 @@ test("shift by 3 with non alpha numeric characters", () => {
 
     expect(result).toBe("Khoor, Zruog!");
 });
+
+//  Analyze array
+
+function analyzeArray(arr) {
+    const min = Math.min(...arr);
+    const max = Math.max(...arr);
+
+    const length = arr.length;
+
+    const average =
+        arr.reduce((accumulator, current) => (accumulator += current), 0) /
+        length;
+
+    return {
+        average,
+        min,
+        max,
+        length,
+    };
+}
